@@ -32,7 +32,7 @@ H1{
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
     <p><button onclick= "document.getElementById('Sign Up').style.display='block'" class="w3-button w3-black">Sign Up</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Login</button></p>
+    <p><button onclick="document.getElementById('Login').style.display='block'" class="w3-button w3-black">Login</button></p>
   </div>
   <div class="w3-display-bottomleft w3-container">
     <p class="w3-xlarge">Find and chat with students in all your classes.</p>
@@ -47,7 +47,8 @@ H1{
       <h1>Sign Up</h1>
     </div>
     <div class="w3-container">
-      <form action="classify2.html" target="_blank">
+
+      <form action="/" method="post" target="_blank">
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email"    name="email"></p>
         <p><input type = "password" class="w3-input w3-padding-16 w3-border" type = "text" placeholder="Password" name="pass"></p>
 	<input type = "submit" value = "Submit" name = "submit">
@@ -55,7 +56,6 @@ H1{
     </div>
   </div>
 </div>
-
 
 <!-- Login -->
 <div id="Login" class="w3-modal">
@@ -65,7 +65,12 @@ H1{
       <h1>Login</h1>
     </div>
     <div class="w3-container">
-      <form action="classify2.html" target="_blank">
+
+        {% if us %}
+        {{ us }}
+        {% endif %}
+
+      <form action="/" method="post" target="_blank">
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" name="email"></p>
         <p><input type = "password" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Password" name="pass"></p>
 	<input type = "submit" value = "Submit" name = "submit">
