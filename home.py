@@ -19,12 +19,10 @@ auth = firebase.auth()
 
 def login():
     if request.method =='POST':
-        email = request.form['name']
+        email = request.form['email']
         password = request.form['pass']
-        try:
-            auth.sign_in_with_email_and_password(email, password)
-        except:
-            'Wrong credentials'
+
+        auth.sign_in_with_email_and_password(email, password)
 
     return render_template('classify.html')
 
