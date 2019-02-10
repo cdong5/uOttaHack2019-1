@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>Classify</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/Users/michpara/Desktop/desk.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+h1{
+   background-color:black;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p>Classify</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick= "document.getElementById('menu').style.display='block'" class="w3-button w3-black">Sign Up</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Login</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Find and chat with students in all your classes.</p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Sign Up</h1>
+    </div>
+    <div class="w3-container">
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email"    required name="Name"></p>
+        <p><input type = "password" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Password" required name="People"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Login</h1>
+    </div>
+    <div class="w3-container">
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Name"></p>
+        <p><input type = "password" class="w3-input w3-padding-16 w3-border" type="number" placeholder="Password" required name="People"></p>
+    
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
